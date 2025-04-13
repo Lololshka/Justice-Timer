@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дебаты: Ваш Выбор + Результаты</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body id="body-main">
+    <div class="container" id="container-main">
+        <div id="initial-state">
+            <h1>Время на размышление...</h1>
+            <div id="timer">01:30</div>
+        </div>
+
+        <div id="choice-state" style="display: none;">
+            <h2>Время вышло! Ваш выбор?</h2>
+            <div class="button-container">
+                <button id="peaceBtn" class="choice-button peace" disabled>ЗА МИР</button>
+                <button id="warBtn" class="choice-button war" disabled>ПРОТИВ МИРА</button>
+            </div>
+             <p id="loading-indicator" style="display: none; margin-top: 15px; color: #555;">Голосование активно...</p>
+        </div>
+
+        <div id="result-state" style="display: none;">
+            <h2 id="result-message"></h2>
+            <!-- Новый блок для отображения голосов -->
+            <div id="vote-counts" class="vote-results" style="margin-top: 25px;">
+                <p>Общие результаты:</p>
+                <span id="peace-count">За мир: ?</span>
+                <span id="war-count">Против мира: ?</span>
+                 <p id="vote-error" style="color: #cc0000; font-size: 0.9em; margin-top: 10px; display: none;">Не удалось загрузить результаты.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
